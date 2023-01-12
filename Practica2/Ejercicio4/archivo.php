@@ -1,6 +1,6 @@
 <?php
-    $parametro1 = $_POST["parametro1"];
-    $parametro2 = $_POST["parametro2"];
-    $resultado = "Los parametros recibidos son: ".$parametro1." y ".$parametro2;
-    echo $resultado;
+  $entrada1 = $_POST['entrada1'];
+  $entrada2 = $_POST['entrada2'];
+  $resultado = $entrada1 + $entrada2;
+  echo $resultado;
 ?>

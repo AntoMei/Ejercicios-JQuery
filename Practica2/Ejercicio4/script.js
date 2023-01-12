@@ -1,9 +1,8 @@
 $(document).ready(function() {
-  $("#btn-enviar").click(function() {
-    var parametro1 = $("#parametro1").val();
-    var parametro2 = $("#parametro2").val();
-    $.post("procesar.php", { parametro1: parametro1, parametro2: parametro2 }, function(data) {
-      $("#resultado").html(data);
+  $("#formulario").submit(function() {
+    var entrada1 = $('#entrada1').val();
+    var entrada2 = $('#entrada2').val();
+    $.post('archivo.php', {entrada1: entrada1, entrada2: entrada2}, function(data) {
     });
-  });
+  })
 });
