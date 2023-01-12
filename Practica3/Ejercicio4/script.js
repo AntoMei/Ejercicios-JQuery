@@ -1,6 +1,6 @@
 $("#form").submit(function(event) {
-    event.preventDefault(); // prevenir el comportamiento por defecto del formulario
-    var formData = $(this).serialize(); // obtener los datos del formulario en una cadena
+    event.preventDefault();
+    var formData = $(this).serialize();
     $.get("archivo.php", formData, function(data) {
       if (data == "usuario correcto") {
         alert("Usuario correcto");
@@ -8,4 +8,4 @@ $("#form").submit(function(event) {
         alert("Usuario incorrecto");
       }
     });
-  });
+});
