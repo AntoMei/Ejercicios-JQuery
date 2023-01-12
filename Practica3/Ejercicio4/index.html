@@ -9,10 +9,14 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="carga">
-        <img src="./carga.gif" alt="">
-    </div>
-    <div id="contenedor"></div>
-    <div id="error"></div>
+    <form id="form" method="get">
+        <label for="user">Usuario:</label>
+        <input type="text" id="user" name="user" required>
+        <br>
+        <label for="pass">Clave:</label>
+        <input type="password" id="pass" name="pass" required>
+        <br>
+        <input type="submit" value="Enviar">
+      </form>
 </body>
 </html>
