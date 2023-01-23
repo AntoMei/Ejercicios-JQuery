@@ -1,5 +1,5 @@
 $(document).ready(function(){
-  $("#boton").click(function(){
-    $("h1").animate({color: "blue"});
+  $("h1").click(function(){
+    $("h1").animate({color: "blue"}, 2000);
   });
 });
