@@ -1,16 +1,8 @@
-$(document).ready(function() {
-$("#hide").click(function(){
-    $("#imagen").hide();
+$(document).ready(function(){
+    $("#saludo").click(function(){
+      $("#mensaje").fadeTo("slow", 1);
+    });
+    $("#despedida").click(function(){
+      $("#mensaje").fadeTo("slow", 0);
+    });
 });
-
-$("#fade").click(function(){
-    $("#imagen").fadeOut();
-});
-
-$("#slide").click(function(){
-    $("#imagen").slideUp();
-});
-
-$("#animate").click(function(){
-    $("#imagen").animate({height : "100px"});
-})});
