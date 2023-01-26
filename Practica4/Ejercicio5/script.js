@@ -4,17 +4,20 @@ $(document).ready(function() {
     $("#cube").animate({
       left: "+=300px"
     }, 1000)
+    $("#cube").dequeue()
     $("#cube").animate({
       top:"+=300px"
     }, 1000)
     $("#cube").animate({
       left:"-=300px"
     }, 1000)
+    $("#cube").dequeue()
     $("#cube").animate({
       top:"-=300px"
     }, 1000)
   });
 
+  
   // Parar efecto
   $("#stop-effect").on("click", function() {
     $("#cube").stop(true)
