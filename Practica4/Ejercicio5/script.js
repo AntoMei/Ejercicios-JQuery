@@ -1,30 +1,21 @@
-$(document).ready(function() {
-  // Iniciar efecto
-  $("#start-effect").on("click", function() {
-    $("#cube").animate({
-      left: "+=300px"
-    }, 1000)
-    $("#cube").dequeue()
-    $("#cube").animate({
-      top:"+=300px"
-    }, 1000)
-    $("#cube").animate({
-      left:"-=300px"
-    }, 1000)
-    $("#cube").dequeue()
-    $("#cube").animate({
-      top:"-=300px"
-    }, 1000)
+function muestraRestantesCola(){
+  var numFuncionesEnCola = $("#micapa").queue().length;
+  $("#mensaje").text("En el momento de hacer el último clic en los botones hay " + numFuncionesEnCola + " funciones de efectos en cola");
+}
+$(document).ready(function(){
+  $("#botonfade").click(function(){
+     capa = $("#micapa");
+     capa.fadeOut(500);
+     capa.fadeIn(500);
+     muestraRestantesCola();
   });
-
-  
-  // Parar efecto
-  $("#stop-effect").on("click", function() {
-    $("#cube").stop(true)
-    $("#cube").css("top","11px");
-    $("#cube").css("left","11px");
+  $("#botonslide").click(function(){
+     capa = $("#micapa");
+     capa.slideUp(500);
+     capa.slideDown(500);
+     muestraRestantesCola();
+  });
+  $("#botontamanocola").click(function(){
+     muestraRestantesCola();
   });
 });
-
-
-
