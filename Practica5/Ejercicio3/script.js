@@ -1,8 +1,19 @@
 $(document).ready(function() {
-  $("#boton").on("click", function() {
-    $("img").deslizar()
-  })
-  $.fn.deslizar = function () {
-    $(this).slideUp()
-  }
+(function($) {
+  $.fn.showMessage = function(options) {
+    var settings = $.extend({
+      message: "Hello, World!"
+    }, options );
+    
+    return this.click(function() {
+      alert(settings.message);
+    });
+  };
+})(jQuery);
+
+$(document).ready(function() {
+  $(".my-element").showMessage({
+    message: "¡Hola, mundo!"
+  });
+ })
 });
