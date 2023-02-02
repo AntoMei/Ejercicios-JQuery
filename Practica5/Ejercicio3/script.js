@@ -12,8 +12,8 @@ $(document).ready(function() {
 })(jQuery);
 
 $(document).ready(function() {
-  $(".my-element").showMessage({
-    message: "¡Hola, mundo!"
+  $("#elemento").showMessage({
+    message: "Hola Antonio"
   });
  })
 });
