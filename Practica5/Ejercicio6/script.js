@@ -1,7 +1,31 @@
 $(document).ready(function() {
-  $("#accordion").accordion({
-    collapsible: true,
-    active: false,
-    heightStyle: "content"
+  $("#datepicker").datepicker();
+
+  var availableTags = [
+    "ActionScript",
+    "AppleScript",
+    "Asp",
+    "BASIC",
+    "C",
+    "C++",
+    "Clojure",
+    "COBOL",
+    "ColdFusion",
+    "Erlang",
+    "Fortran",
+    "Groovy",
+    "Haskell",
+    "Java",
+    "JavaScript",
+    "Lisp",
+    "Perl",
+    "PHP",
+    "Python",
+    "Ruby",
+    "Scala",
+    "Scheme"
+  ];
+  $("#autocomplete").autocomplete({
+    source: availableTags
   });
 });
